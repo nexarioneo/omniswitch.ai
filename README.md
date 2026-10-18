@@ -24,6 +24,8 @@ Client -> OpenAI Format -> [Gateway] -> Provider (OpenAI/Anthropic/Gemini/dll)
 ## Menjalankan
 
 ```bash
+git clone https://github.com/nexarioneo/omniswitch.ai.git
+cd omniswitch.ai
 npm install
 npm run db:migrate   # buat tabel
 npm run db:seed      # user admin + daftar provider default
@@ -38,7 +40,7 @@ npm run dev          # atau: npm run build && npm start
 ## Dokumentasi
 
 - `docs/ARCHITECTURE.md` - arsitektur kode, data layer, gateway pipeline
-- `DESIGN.md` - design system untuk dashboard
+- `docs/DESIGN.md` - design system untuk dashboard
 
 ## Tech Stack
 

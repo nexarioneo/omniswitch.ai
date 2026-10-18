@@ -31,5 +31,5 @@ For any question about project architecture (directory layout, layering, routing
 <!-- git:start -->
 ## git
 
-This project uses a **local-only** git repository; there is no remote. Commit each finished and verified work item as one coherent commit, with a short Indonesian message that says what changed and why (subject in the imperative, body only when the reason is not obvious). Never commit runtime data (`storage/data/`, `storage/uploads/`, `backups/`), `.env.local`, or anything else listed in `.gitignore`. Run the checks that fit the change (`npx tsc --noEmit`, `npm run lint`, `npm run build`, the smoke scripts) before committing, and leave `git status` clean afterwards.
+This project is hosted on GitHub at `nexarioneo/omniswitch.ai` (public, remote `origin`), so commits are pushed, not kept local. Commit each finished and verified work item as one coherent commit, with a short Indonesian message that says what changed and why (subject in the imperative, body only when the reason is not obvious). Never commit runtime data (`storage/data/`, `storage/uploads/`, `backups/`), `.env.local`, or anything else listed in `.gitignore`. Run the checks that fit the change (`npx tsc --noEmit`, `npm run lint`, `npm run build`, the smoke scripts) before committing, then push and leave `git status` clean afterwards.
 <!-- git:end -->
