@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  /* Green primary - Material 3 tonal palette */
+  --green-0: #000000;
+  --green-10: #002106;
+  --green-20: #00390D;
+  --green-30: #005314;
+  --green-40: #006D1B;
+  --green-50: #008723;
+  --green-60: #00A22B;
+  --green-70: #00BD34;
+  --green-80: #00D93D;
+  --green-90: #4EFF5E;
+  --green-95: #B8FFC0;
+  --green-99: #F2FFF0;
+  --green-100: #FFFFFF;
+
+  /* Neutral palette */
+  --neutral-0: #000000;
+  --neutral-10: #1A1C19;
+  --neutral-20: #2F312D;
+  --neutral-30: #454843;
+  --neutral-40: #5D6059;
+  --neutral-50: #767971;
+  --neutral-60: #90938A;
+  --neutral-70: #ABAEA5;
+  --neutral-80: #C6C9BF;
+  --neutral-90: #E2E3DB;
+  --neutral-95: #F1F1EA;
+  --neutral-99: #FCFCF5;
+  --neutral-100: #FFFFFF;
+
+  /* Error palette */
+  --error-40: #BA1A1A;
+  --error-90: #FFDAD6;
+  --error-99: #FFF9F9;
+
+  /* Semantic tokens - light mode (default) */
+  --md-surface: var(--neutral-99);
+  --md-surface-container-lowest: var(--neutral-100);
+  --md-surface-container-low: var(--neutral-95);
+  --md-surface-container: #F5F5EF;
+  --md-surface-container-high: #EFEFE9;
+  --md-surface-container-highest: #E9E9E3;
+
+  --md-primary: var(--green-40);
+  --md-on-primary: var(--green-100);
+  --md-primary-container: var(--green-90);
+  --md-on-primary-container: var(--green-10);
+
+  --md-secondary-container: var(--neutral-90);
+  --md-on-secondary-container: var(--neutral-10);
+
+  --md-on-surface: var(--neutral-10);
+  --md-on-surface-variant: var(--neutral-40);
+  --md-outline: var(--neutral-60);
+  --md-outline-variant: var(--neutral-80);
+
+  --md-error: var(--error-40);
+  --md-on-error: var(--neutral-100);
+  --md-error-container: var(--error-90);
+  --md-on-error-container: #410002;
+
+  --md-state-hover: rgba(26, 28, 25, 0.08);
+  --md-state-focus: rgba(26, 28, 25, 0.12);
+  --md-state-pressed: rgba(26, 28, 25, 0.12);
+  --md-state-disabled: rgba(26, 28, 25, 0.12);
+
+  /* Typography */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  /* Radius */
+  --md-radius-xs: 4px;
+  --md-radius-sm: 8px;
+  --md-radius-md: 12px;
+  --md-radius-lg: 16px;
+  --md-radius-xl: 28px;
+  --md-radius-full: 9999px;
+
+  /* Motion */
+  --md-duration-short: 100ms;
+  --md-duration-medium: 250ms;
+  --md-duration-long: 400ms;
+  --md-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --header-height: 64px;
+}
+
+[data-theme="dark"] {
+  --md-surface: var(--neutral-10);
+  --md-surface-container-lowest: var(--neutral-0);
+  --md-surface-container-low: #1E201D;
+  --md-surface-container: #232521;
+  --md-surface-container-high: #2D2F2B;
+  --md-surface-container-highest: #383A35;
+
+  --md-primary: var(--green-80);
+  --md-on-primary: var(--green-20);
+  --md-primary-container: var(--green-30);
+  --md-on-primary-container: var(--green-90);
+
+  --md-secondary-container: var(--neutral-30);
+  --md-on-secondary-container: var(--neutral-90);
+
+  --md-on-surface: var(--neutral-90);
+  --md-on-surface-variant: var(--neutral-70);
+  --md-outline: var(--neutral-60);
+  --md-outline-variant: var(--neutral-30);
+
+  --md-error: #FFB4AB;
+  --md-on-error: #690005;
+  --md-error-container: #93000A;
+  --md-on-error-container: var(--error-90);
+
+  --md-state-hover: rgba(226, 227, 219, 0.08);
+  --md-state-focus: rgba(226, 227, 219, 0.12);
+  --md-state-pressed: rgba(226, 227, 219, 0.12);
+  --md-state-disabled: rgba(226, 227, 219, 0.12);
+}
+
+@theme inline {
+  --color-surface: var(--md-surface);
+  --color-surface-container: var(--md-surface-container);
+  --color-surface-container-low: var(--md-surface-container-low);
+  --color-surface-container-lowest: var(--md-surface-container-lowest);
+  --color-surface-container-high: var(--md-surface-container-high);
+  --color-surface-container-highest: var(--md-surface-container-highest);
+  --color-primary: var(--md-primary);
+  --color-on-primary: var(--md-on-primary);
+  --color-primary-container: var(--md-primary-container);
+  --color-on-primary-container: var(--md-on-primary-container);
+  --color-secondary-container: var(--md-secondary-container);
+  --color-on-secondary-container: var(--md-on-secondary-container);
+  --color-on-surface: var(--md-on-surface);
+  --color-on-surface-variant: var(--md-on-surface-variant);
+  --color-outline: var(--md-outline);
+  --color-outline-variant: var(--md-outline-variant);
+  --color-error: var(--md-error);
+  --color-on-error: var(--md-on-error);
+  --color-error-container: var(--md-error-container);
+  --color-on-error-container: var(--md-on-error-container);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--md-surface);
+  color: var(--md-on-surface);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
