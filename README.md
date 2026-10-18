@@ -1,5 +1,7 @@
 # Omniswitch AI Gateway
 
+[![CI](https://github.com/nexarioneo/omniswitch.ai/actions/workflows/ci.yml/badge.svg)](https://github.com/nexarioneo/omniswitch.ai/actions/workflows/ci.yml)
+
 OpenAI-compatible API gateway that routes to multiple AI providers (OpenAI, Anthropic, Google Gemini, Groq, OpenRouter, DeepSeek, dan lainnya).
 
 ## Konsep
@@ -22,6 +24,8 @@ Client -> OpenAI Format -> [Gateway] -> Provider (OpenAI/Anthropic/Gemini/dll)
 - Admin dashboard untuk manage keys, providers, models
 
 ## Menjalankan
+
+Butuh Node.js 26 (versi yang dipakai di CI).
 
 ```bash
 git clone https://github.com/nexarioneo/omniswitch.ai.git
@@ -47,3 +51,7 @@ npm run dev          # atau: npm run build && npm start
 - Next.js (App Router) + TypeScript
 - SQLite (node:sqlite)
 - Tailwind CSS v4
+
+## Lisensi
+
+MIT, lihat [LICENSE](LICENSE).
